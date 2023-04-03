@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Checkpoint
   - DeathTrigger
+  - Triangle
+  - Circle
+  - Square
   layers:
   - Default
   - TransparentFX

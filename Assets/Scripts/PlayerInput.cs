@@ -8,15 +8,38 @@ public enum Lanes
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] Transform[] lanesTransform;
-    [SerializeField] Lanes currentlane;
+    Lanes currentlane;
+    [SerializeField] SpriteRenderer _spriteRenderer;
+    [SerializeField] Sprite[] sprites;
 
 
     private float playerPositionY;
     // Start is called before the first frame update
     void Start()
     {
+        MorphShape();
+
         currentlane = global::Lanes.centre;
         playerPositionY=transform.position.y;
+    }
+    private void MorphShape()
+    {
+        //Assign a sprite for the player
+        int rand =Random.Range(0, sprites.Length);
+        _spriteRenderer.sprite = sprites[rand];
+        switch (rand)
+        {
+            case 0:
+                gameObject.tag = "Circle";
+                break;
+
+            case 1:
+                gameObject.tag = "Square";
+                break;
+            case 2:
+                gameObject.tag = "Triangle";
+                break;
+        }
     }
 
     // Update is called once per frame

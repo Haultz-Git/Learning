@@ -6,8 +6,6 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] float lanePositionX;
-    [SerializeField] SpriteRenderer _spriteRenderer;
-    [SerializeField] Sprite[] enemySprites;
 
     private const string PLAYERTAG = "Player";
     private float deltaY;
@@ -16,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
         deltaY= 0;
 
         //Assign a sprite for the enemy
-        _spriteRenderer.sprite = enemySprites[Random.Range(0,enemySprites.Length)];
+        //_spriteRenderer.sprite = enemySprites[Random.Range(0,enemySprites.Length)];
 
         //Picks a lane (left,centre,right) when spawning and assignes it to lanePositionX which then it assigns to transform>position>x
     }
@@ -33,9 +31,13 @@ public class EnemyMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if collides with player do somethings
-        if(collision.gameObject.tag == PLAYERTAG)
+        if(collision.gameObject.tag == gameObject.tag)
         {
-            Debug.Log("Collided with the player");
+            Debug.Log("Right Shape");
+        }
+        else
+        {
+            Debug.Log("Wrong Shape");
         }
     }
 }

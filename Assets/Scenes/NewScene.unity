@@ -123,6 +123,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &54772934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54772936}
+  - component: {fileID: 54772935}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &54772935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54772934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1efbf25b238ba6498f4eafe31adaf84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 4871347238067111130, guid: 99db62475623be141ba6893741ed1c36, type: 3}
+  - {fileID: 856287444887290405, guid: 6115d8e85fcfb394a9cd574cd20a5603, type: 3}
+  - {fileID: 9218231126257443116, guid: 70da75aede633c94f95e45084bc6d493, type: 3}
+  Lanes:
+  - {fileID: 2044633318}
+  - {fileID: 589826380}
+  - {fileID: 1619399221}
+  randomLanes: 000000000100000002000000
+  spawnRate: 5
+--- !u!4 &54772936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54772934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.936924, y: 2.4790485, z: -0.18430717}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &95070311
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +497,11 @@ MonoBehaviour:
   - {fileID: 2044633318}
   - {fileID: 589826380}
   - {fileID: 1619399221}
-  currentlane: 1
+  _spriteRenderer: {fileID: 95070313}
+  sprites:
+  - {fileID: -2413806693520163455, guid: 0f1f8ddef035eae4ab66a7710b6c1e28, type: 3}
+  - {fileID: 7482667652216324306, guid: a2d5801a0083e8040a32f70d9b7cb162, type: 3}
+  - {fileID: 7482667652216324306, guid: e17c04171c6c748449e33b086a55bd42, type: 3}
 --- !u!4 &1766450037
 Transform:
   m_ObjectHideFlags: 0
